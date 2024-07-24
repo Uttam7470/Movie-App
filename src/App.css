@@ -1,0 +1,750 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #031022;
+}
+
+nav{
+ 
+    backdrop-filter: blur(5px);
+  padding: 1rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+
+}
+h3{
+  font-size: 30px;
+  color: aliceblue;
+  font-family: Outfit , sans-serif;
+  cursor: pointer;
+}
+ul{
+  list-style: none;
+  display: flex;
+ 
+}
+li{
+  padding: 0px 8px;
+  margin: 0px 8px;
+  font-family: Outfit , sans-serif;
+}
+a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.hero-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ padding-top: 10%;
+ padding-bottom: 13%;
+  background-color: #04152D;
+}
+
+.hero{
+  
+  padding: 1rem;
+  width: 50%;
+  text-align: center;
+  z-index: 2;
+}
+.hero h1{
+  font-size: 70px;
+  color: white;
+  font-family: Raleway , sans-serif;
+  margin-bottom: 0.25rem;
+}
+.hero p{
+   font-size: 20px;
+   color: white;
+   font-family: Raleway , sans-serif;
+   margin-bottom: 1.5rem;
+}
+
+.hero-bg-img{
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+
+  top: 0;
+}
+.hero-bg-img .hero-bg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+
+}
+.hero-bg-img_1{
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.7;
+}
+.hero-bg-img_2{
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(180deg, #04152d00, #04152d 79.17%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.singleMoviePage-img_1{
+
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.singleMoviePage-img_2{
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(180deg, #04152d00, #04152d 60.17%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.search{
+  width: 80%;
+  margin: 0px auto;
+ 
+  display: flex;
+  font-family: Outfit , sans-serif;
+}
+.search input, .search .btn{
+  height: 50px;
+  border: 1px solid #e1e1e1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+.search input{
+  width: 80%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.search .btn{
+  width: 20%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+  color: #fff;
+}
+.display-container , .searchResult-container , .discover-movies-container , .discover-tvShows-container{
+  padding: 2rem 12%;
+  background-color: #04152D;
+  color: white;
+  font-family: Outfit , sans-serif;
+  width: 100%;
+}
+.display-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0px 0.75rem;
+}
+.toggle {
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  padding: 0.25rem;
+  border-radius: 30px;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.toggle{
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  padding: 0.25rem ;
+  border-radius: 30px;
+  justify-content: space-between;
+
+}
+.toggle .toggle-option{
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  color: #04152D;
+  cursor: pointer;
+  transition: opacity 0.5s, color 0.5s ;
+}
+.toggle .toggle-option.active{
+  background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+  color: white;
+}
+
+.display-movies{
+
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-container{
+
+  padding: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 1rem;
+
+}
+.card-width{
+  width: calc(20% - 12px);
+}
+.image{
+  width: 100%;
+ 
+  position: relative;
+  margin-bottom: 1.5rem;
+
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+ 
+
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #36333317;
+  transition: all 0.3s;
+
+
+}
+.image .overlay:hover{
+  background-color: #302e2e62;
+}
+.rating{
+  width: 50px;
+  position: absolute;
+  bottom: -6%;
+  background-color: #fff;
+  border-radius: 50%;
+  left: 2%;
+  padding: 0.15rem;
+}
+.genre{
+  position: absolute;
+  right: 3%;
+  bottom: 8%;
+  display: flex;
+  gap: 0.25rem;
+  font-size: 13px;
+  flex-wrap: wrap;
+justify-content: flex-end;
+}
+.genre p{
+  background-color: #DA2F68;
+  padding: 0.25rem;
+  border-radius: 5px;
+}
+.movie-info{
+  margin-top: 2rem;
+}
+.movie-info p:first-of-type{
+  font-size: 19px;
+  margin-bottom: 0.5rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.movie-info p:last-of-type{
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+  color: #767F8C;
+}
+
+.searchResult-container h1{
+  margin-bottom: 2rem;
+  font-family: Reddit Mono , sans-serif;
+}
+
+.heading h3{
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 2rem;
+}
+
+.fallback-container{
+  width: calc(20% - 12px);
+  padding: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 1rem;
+   background-color: #f3f0f070;
+}
+
+
+.skeleton{
+  padding: 6% 0%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 4rem;
+}
+.skeleton-line-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+ 
+  height: 400px;
+
+}
+.skeleton-line{
+  width: 600px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+
+    
+.singleMoviePage-container{
+ 
+ height: 90vh;
+ padding-top: 8%;
+
+}
+.singleMoviePage{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  position: absolute;
+  width: 100%;
+  padding: 0px 8rem;
+  
+}
+.left{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.singleMoviePage .single-image{
+  width: calc(80% - 12px);
+}
+.singleMoviePage .single-image img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+ position: relative;
+}
+.singleMoviePage .single-description{
+   width: 45%;
+ 
+   font-family: Inter , sans-serif;
+   padding: 0.5rem;
+   position: relative;
+
+}
+.single-description .heading{
+  margin-bottom: 1rem;
+}
+.single-description h2{
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+}
+.singleMoviePage .single-description p{
+  font-style: italic;
+  color: #9ea2a8;
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
+.single-genre{
+ 
+  display: flex;
+  gap: 0.45rem;
+  font-size: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.singleMoviePage .single-genre p{
+  background-color: #DA2F68;
+  padding: 0.35rem;
+  border-radius: 5px;
+color: white;
+font-weight: 400;
+
+}
+.single-rating{
+  width: 75px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.15rem;
+}
+.singleMoviePage .overview{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+}
+.singleMoviePage .overview h3{
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.singleMoviePage .overview p{
+  color: white;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.optional-info{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+}
+.optional-info p span:first-of-type{
+  color: white;
+}
+.singleMoviePage hr{
+ border-color:#ababadcb;
+ margin-bottom: 0.5rem;
+}
+
+ .singleMoviePage .optional-info .pa {
+  color: white;
+ 
+  
+}
+.single-credits{
+padding-top: 15px;
+  text-align: center;
+ 
+}
+
+
+.single-credits-container {
+  /* padding-top: 120px; */
+}
+
+.single-credits .image{
+  width: 175px;
+  height: 175px;
+  margin: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+.single-credits .image img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform .2s ease-in-out;
+  border-radius: 50%;
+
+
+}
+
+.single-credits .image img:hover{
+  transform: scale(1.05);
+}
+
+.single-credits .actor-name p{
+  margin-bottom: 0.5rem;
+}
+.single-credits .actor-name p:last-of-type{
+  color: #9ea2a8;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer ul:first-child {
+  margin-top: 0;
+}
+
+footer ul:last-child {
+  margin-bottom: 0;
+}
+
+footer li {
+  margin: 0.5rem;
+}
+
+footer a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+footer p {
+  max-width: 800px;
+  margin: 1rem auto;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+@media screen and (max-width:1500px){
+  .display-container , .searchResult-container , .discover-movies-container , .discover-tvShows-container{
+    padding: 2rem 8%;
+  }
+  .first-container{
+    padding-top: 15%;
+  }
+  .first-Credits{
+    padding-top: 5%;
+  }
+
+}
+@media screen and (max-width:1350px){
+  .hero{
+    width: 70%;
+  }
+  .singleMoviePage {
+    padding: 0rem 4rem;
+    gap: 2rem;
+  }
+  .left{
+    width: 40%;
+  }
+  .singleMoviePage .single-image{
+    width: calc(90% - 12px);
+  }
+}
+@media screen and (max-width:1200px){
+  
+  .display-container , .searchResult-container , .discover-movies-container , .discover-tvShows-container{
+    padding: 2rem 4%;
+  }
+  .first-container{
+    padding-top: 22%;
+  }
+  .first-Credits{
+    padding-top: 10%;
+  }
+
+}
+@media screen and (max-width:1050px){
+  .display-container , .searchResult-container , .discover-movies-container , .discover-tvShows-container{
+    padding: 2rem 2rem;
+  }
+  .first-container{
+    padding-top: 30%;
+  }
+  .first-Credits{
+    padding-top: 15%;
+  }
+  .genre{
+    right: 1%;
+    bottom: 15%;
+  }
+  .singleMoviePage {
+    padding: 0rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .left{
+    width: 45%;
+  }
+  .singleMoviePage .single-image{
+    width: 100%;
+  }
+  .singleMoviePage .single-description {
+    width: 50%;
+  }
+}
+@media screen and (max-width:900px){
+
+  .card-width{
+    width: calc(27% - 12px);
+  }
+  .genre{
+    bottom: 10%;
+  }
+  .hero{
+    width: 85%;
+  }
+  .display-movies{
+    justify-content:center;
+    gap: 2rem;
+  }
+  .singleMoviePage {
+    padding: 0rem 1rem;
+    gap: 1rem;
+  }
+  .left{
+    width: 50%;
+  }
+  .first-container{
+    padding-top: 50%;
+  }
+  .first-Credits{
+    padding-top: 18%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  footer ul, footer p {
+    width: 100%;
+  }
+  
+
+  
+  footer li {
+    margin: 0.25rem 0;
+  }
+}
+
+@media screen and (max-width:700px){
+
+  .card-width{
+    width: calc(45% - 12px);
+  }
+  .genre{
+    bottom: 15%;
+  }
+  .hero{
+    width: 95%;
+  }
+   .hero-bg-img{
+    height: 65vh;
+   }
+   .hero-bg-img_2{
+    height: 100px;
+    bottom: -2px;
+   }
+   .search{
+    width: 95%;
+   }
+  .singleMoviePage{
+    flex-wrap: wrap;
+  }
+  .singleMoviePage {
+    padding: 0rem 2rem;
+    gap: 2rem;
+  }
+  .left{
+    width: 70%;
+  }
+  .singleMoviePage .single-description {
+    width: 100%;
+  }
+}
+
+
+footer ul:last-child a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width:500px){
+  .single-credits .image {
+    width: 125px;
+    height: 125px;
+  }
+
+  .card-width{
+    width: calc(47% - 12px);
+  }
+  .genre{
+    bottom: 20%;
+  }
+  .hero{
+    width: 100%;
+  }
+   .hero-bg-img{
+    height: 60vh;
+   }
+   .hero-bg-img_2{
+    height: 50px;
+    bottom: -2px;
+   }
+   .search{
+    width: 100%;
+   }
+   .search .btn {
+    width: 30%;
+   }
+   .display-container , .searchResult-container , .discover-movies-container , .discover-tvShows-container{
+    padding: 2rem 1.5rem;
+  }
+  .first-container{
+    padding-top: 60%;
+  }
+  .first-Credits{
+    padding-top: 30%;
+  }
+  nav{
+    padding: 1rem 5%;
+  }
+  .hero h1{
+    font-size: 45px;
+  }
+  .hero p{
+    font-size: 18px;
+  }
+  .singleMoviePage {
+    padding: 0rem 0.5rem;
+    gap: 1rem;
+  }
+  .left{
+    width: 70%;
+  }
+
+
+}
+ 
+
+
